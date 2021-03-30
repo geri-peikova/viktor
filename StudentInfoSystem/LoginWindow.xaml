@@ -1,0 +1,28 @@
+﻿<Window x:Class="StudentInfoSystem.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentInfoSystem"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="800">
+    <GroupBox Header="Лични данни" Margin="50">
+        <Grid x:Name="PersonalDataGrid" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="91*"/>
+                <ColumnDefinition Width="137*"/>
+                <ColumnDefinition Width="123*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Потребител:" Margin="10,20"/>
+            <TextBox Text="{Binding Login.Username, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding FormState.IsEnabled}" TextWrapping="Wrap" Grid.Column="1" Margin="10,20"/>
+            <Label Content="Парола:" Grid.Row="1" Margin="10,20"/>
+            <TextBox Text="{Binding Login.Password, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding FormState.IsEnabled}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" Margin="10,20"/>
+            <Button Command="{Binding LoginCommand}" Content="Влез" Grid.Column="2" Margin="20" Grid.Row="2"/>
+        </Grid>
+    </GroupBox>
+</Window>

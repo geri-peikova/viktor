@@ -38,6 +38,7 @@
                     <TextBox Text="{Binding Student.LastName, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding FormState.IsEnabled}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2" Margin="9,10,8,12" VerticalContentAlignment="Center"/>
                     <TextBox Text="{Binding Student.LastEnter}" Margin="5,10" TextWrapping="Wrap" Grid.Column="3" IsEnabled="False" FontSize="11"/>
                     <Label Content="Последен вход:" Margin="5,9" Grid.Column="2"/>
+                    <Button Content="Влез" Grid.Column="3" Margin="0" Grid.Row="1" Click="Button_Click"/>
                 </Grid>
             </GroupBox>
             <GroupBox Header="Студентска информация" Margin="5,5,5,0" Grid.Row="1">
